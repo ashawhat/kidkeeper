@@ -2,6 +2,7 @@ class ChildsController < ApplicationController
 
 def index
   @child = Childs.all
+  @child = current_user
 end
 
 def new
@@ -15,6 +16,7 @@ end
 
 def show
   @child = Child.find_by(params[:id])
+  @child = current_user
 end
 
 private

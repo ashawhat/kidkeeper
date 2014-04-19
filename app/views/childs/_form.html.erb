@@ -1,4 +1,4 @@
-<%= form_for @child, :url => childs_path, :html => { :multipart => true } do |form| %>
+<%= form_for @child, :url => childs_path(@child), :html => { :multipart => true } do |form| %>
   <%= form.label "Name" %>
   <%= form.text_field :name %>
   <%= form.label "Age" %>
