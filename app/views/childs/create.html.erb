@@ -1,0 +1,10 @@
+<%= form_for @child, :url => child_path, :html => { :multipart => true } do |form| %>
+  <%= form.label "Name" %>
+  <%= form.text_field :name %>
+  <%= form.label "Age" %>
+  <%= form.text_field :age %>
+  <br>
+  <%= form.label "Photo" %>
+  <%= form.file_field :avatar %>
+  <%= form.submit "send" %>
+<% end %>
