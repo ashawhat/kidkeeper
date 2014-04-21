@@ -1,6 +1,11 @@
-Lovely Child's Name
-<%= @child %>
-<%= image_tag @child.avatar.url(:medium) %>
+Child Manager
+current_user.  child.where(user_id == current_user.id)
+
+
+
+Lovely Child's Name (show)
+<%= @child.name %>
+
 <br>
 <br>
 Photo

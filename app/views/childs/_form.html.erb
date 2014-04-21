@@ -1,4 +1,7 @@
-<%= form_for @child, :url => childs_path, :html => { :multipart => true } do |form| %>
+<%= form_for @child, :url => childs_path, :action => 'post', :html => { :multipart => true } do |form| %>
+
+  <%= form.hidden_field :user_id, :value => current_user.id %>
+
   <%= form.label "Name" %>
   <%= form.text_field :name %>
   <%= form.label "Age" %>
