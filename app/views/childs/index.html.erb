@@ -1,26 +1,5 @@
-Child Manager
-current_user.  child.where(user_id == current_user.id)
-
-
-
-Lovely Child's Name (show)
-<%= @child.name %>
-
-<br>
-<br>
-Photo
-<br>
-<br>
-Schedule
-<br>
-<br>
-Calendar
-<br>
-<br>
-Status
-<br>
-<br>
-School > Homework
-<br>
-<br>
-CheckOff List
+<h1> <%= current_user.username %>'s Children </h1>
+<% current_user.childs.each do |c| %>
+<%= link_to c.name, child_path(c.id) %><br />
+<%= image_tag c.avatar.url(:thumb) %> <br />
+<% end %>

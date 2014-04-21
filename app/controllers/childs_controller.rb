@@ -1,8 +1,7 @@
 class ChildsController < ApplicationController
 
 def index
-  @children = Child.all
-  @child = current_user.child
+
 end
 
 def new
@@ -31,7 +30,7 @@ def update
 end
 
 def show
-  @child = Child.find_by(params[:id])
+  @child = Child.find(params[:id])
 end
 
 private
